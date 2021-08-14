@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="mod1/css/aula06.css">
+    <script>
+
+    $(function(){
+        var ex = $('.ex1');
+
+    $('.ev1').click(function(){
+        $(this).css("background", "#ccc");
+        ex.text("Você Clicou");
+    });
+
+    $('.ev2').dblclick(function(){
+        $(this).css("background", "#ccc");
+        ex.text("Você clicou duas vezes");
+    });
+
+    $('.ev3').focusin(function(){
+        $(this).css("background", "#ccc");
+        ex.text("Você deu foco!");
+    }).focusout(function(){
+        $(this).css("background", "#000");
+        ex.text("Você tirou o foco!");
+    });
+
+    $('.ev4').hover(function(){
+        $(this).css("background", "#ccc");
+        ex.text("Você passou o mouse");
+    });
+
+    $('.ev5').mousedown(function(){
+        $(this).css("background", "#ccc");
+        ex.text("Você apertou o botão do mouse"); 
+    }).mouseup(function(){
+        $(this).css("background", "#000");
+        ex.text("Voce soltou o botão do mouse")
+    });
+
+    var a = 0;
+    $('.ev6').mouseenter(function(){
+        a +=1;
+        ex.text("Entradas do Mouse: "+a);
+    }).mouseout(function(){
+        ex.text("Saídas do Mouse: ");
+    });
+
+    var b = 0;
+    $('.ev7').mouseover(function(){
+        b +=1;
+        ex.text("Mouse over: "+b);
+    }).mouseleave(function(){
+        ex.text("Mouse Leave");
+    });
+
+    $('.ev8').mousemove(function(move){
+        var localx = move.pageX;
+        var localy = move.pageY;
+        ex.text("Movimento X: "+localx+" - Movimento Y: "+localy);
+    });
+});
+
+
+    </script>
+</head>
+<body>
+    <div class="ex1">Aguardando Ação</div>
+    <!--
+    <p class="ev1">Um Clique</p>
+    <p class="ev2">Dois Cliques</p>
+    <input type="text" class="ev3">
+    <p class="ev4">Passe o mouse</p>
+    <p class="ev5">Clique e solte</p>
+     -->
+    <p class="ev6">Entra e <span>Sai</span></p>
+    <p class="ev7">Mouse <span>Over</span></p>
+    <p class="ev8">Mova o Mouse no Elemento</p>
+</body>
+</html>

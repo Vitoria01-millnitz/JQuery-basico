@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Desenvolvimento em JQuery</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script>
+
+        $(document).ready(function(){
+            /*
+            $('h1')
+            .css("color","#f66")
+            .hide()//item oculto
+            .delay('1000')//tempo de 1 segundo
+            .fadeIn("slow")//efeito
+            .text('Curso Jquery PontoCanal')
+            .click(function(){
+                $('body').css("background", "#C30")
+                $('h1').css("color","#fff");
+            });
+            */
+           $('a').css({color:'red', display:'block'});
+           $('.link2').css("color", "green");
+           $('#link3').css("color", "#000");
+           $('*').css("padding", "10px");
+           $('h1, #link3').css("border-bottom", "solid 3px blue");
+        });
+
+    </script>
+</head>
+<body>
+
+    <h1>PontoCanal Inscreva-se</h1>
+
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+
+</body>
+</html>

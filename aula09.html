@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de Teclado e Formulário</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="mod1/css/aula09.css">
+    <script>
+
+        $(function(){ //mais prático colocar um placeholder no input
+            
+            var ex = $('.ex1');
+
+            $('.ev1').click(function(){
+                ex.hide('slow');//desaparece
+            });
+
+            $('.ev2').click(function(){
+                ex.show('slow');//aparece
+            });
+
+            $('.ev3').click(function(){
+                ex.toggle('slow');//intecala os eventos acima
+            });
+
+            $('.ev4').keyup(function(){//assim que terminar de escrever
+                var texto = $(this).val();
+
+                if(texto == 'hide'){
+                    ex.hide('slow');
+                }
+                if(texto == 'slow'){
+                    ex.slow('slow');
+                }
+                if(texto == 'toggle'){
+                    ex.toggle('slow');
+                }
+            });
+        });
+    </script>
+
+    <div class="ex1">Aguardando Ação</div>
+
+    <p class="ev1">Hide</p>
+    <p class="ev2">Show</p>
+    <p class="ev3">Toggle</p>
+    <input type="text" class="ev4">
+    
+</body>
+</html>
